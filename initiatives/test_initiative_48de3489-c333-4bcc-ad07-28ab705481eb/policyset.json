@@ -1,0 +1,39 @@
+{
+ "properties": {
+  "displayName": "test_initiative",
+  "policyType": "Custom",
+  "description": "This is a test initiative test",
+  "metadata": {
+   "category": "App Platform",
+   "createdBy": "2f3b4875-d3f3-4e09-81d8-d576f88bc275",
+   "createdOn": "2020-09-08T08:51:48.8750564Z",
+   "updatedBy": "2f3b4875-d3f3-4e09-81d8-d576f88bc275",
+   "updatedOn": "2020-09-08T08:57:04.8224346Z"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "6754512286773452676",
+    "policyDefinitionId": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policyDefinitions/4a95401e-9187-4309-ad2b-4d301d83b04d",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "9437460531094811399",
+    "policyDefinitionId": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policyDefinitions/e4ed8da0-be44-47ba-b654-78994a69a369",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "2209692545699725561",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4d24b6d4-5e53-4a4f-a7f4-618fa573ee4b",
+    "parameters": {},
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policySetDefinitions/48de3489-c333-4bcc-ad07-28ab705481eb",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "48de3489-c333-4bcc-ad07-28ab705481eb"
+}

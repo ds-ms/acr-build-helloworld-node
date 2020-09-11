@@ -1,0 +1,37 @@
+{
+ "properties": {
+  "displayName": "moanjum_tag_test_true",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Test tag should be present with value as true",
+  "metadata": {
+   "category": "test",
+   "createdBy": "2f3b4875-d3f3-4e09-81d8-d576f88bc275",
+   "createdOn": "2020-09-04T07:13:14.0082427Z",
+   "updatedBy": "baf4f624-69ca-44ab-bde6-916ec0c4890f",
+   "updatedOn": "2020-09-04T07:23:25.7317199Z",
+   "gitHubPolicy": {
+    "digest": "8f029e27876c21e26866df04c9eedd268bf2f9ed",
+    "repoName": "tauhid621/policy_bugbash",
+    "commitSha": "14f146890ff1942090edfda01672e1fb0b34acea",
+    "runUrl": "https://github.com/tauhid621/policy_bugbash/actions/runs/239043790",
+    "filepath": "AzurePolicies/policies/moanjum_tag_test_true_831d471c-0a56-448e-9c27-9a879c9ea3ba"
+   }
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "not": {
+     "field": "tags.test",
+     "match": "true"
+    }
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policyDefinitions/831d471c-0a56-448e-9c27-9a879c9ea3ba",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "831d471c-0a56-448e-9c27-9a879c9ea3ba"
+}

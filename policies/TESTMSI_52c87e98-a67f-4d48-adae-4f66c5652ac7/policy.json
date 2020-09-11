@@ -1,0 +1,44 @@
+{
+ "properties": {
+  "displayName": "TESTMSI",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "createdBy": "a1382ee0-8aa7-4155-8092-17e3603acf07",
+   "createdOn": "2020-08-18T08:13:24.9418919Z",
+   "updatedBy": "a80980fe-42a7-4713-95bd-32f873938cd4",
+   "updatedOn": "2020-09-02T08:54:32.800581Z",
+   "gitHubPolicy": {
+    "digest": "b3990987394a3a1512aba5e5c0c9bdfa28765e33",
+    "repoName": "Ganeshrockz/TestRepo",
+    "commitSha": "9b3e73ec6ae3b05c33251decb9345efb201dc179",
+    "runUrl": "https://github.com/Ganeshrockz/TestRepo/actions/runs/235757316",
+    "filepath": "policies/TESTMSI_52c87e98-a67f-4d48-adae-4f66c5652ac7"
+   }
+  },
+  "parameters": {
+   "allowedLocations": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Allowed locations",
+     "description": "The list of allowed locations for resources.",
+     "strongType": "location"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "not": {
+     "field": "location",
+     "in": "[parameters('allowedLocations')]"
+    }
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policyDefinitions/52c87e98-a67f-4d48-adae-4f66c5652ac7",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "52c87e98-a67f-4d48-adae-4f66c5652ac7"
+}

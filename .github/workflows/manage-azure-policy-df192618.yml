@@ -1,0 +1,29 @@
+name: manage-azure-policy-df192618
+on:
+  push:
+    paths:
+      - 'policies/Use_match_condition_on_tag_value._4a95401e-9187-4309-ad2b-4d301d83b04d/**'
+      - 'policies/TESTMSI_52c87e98-a67f-4d48-adae-4f66c5652ac7/**'
+      - 'policies/moanjum_tag_test_true_831d471c-0a56-448e-9c27-9a879c9ea3ba/**'
+      - 'policies/PolicyAsCodeTest_8c3cea42-bc7a-4627-9721-219730045b1f/**'
+      - 'policies/TEST_Duplicate1_9bbddb6e-eb92-4490-a003-5a7bd19f2402/**'
+      - .github/workflows/manage-azure-policy-df192618.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_df192618}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/Use_match_condition_on_tag_value._4a95401e-9187-4309-ad2b-4d301d83b04d/**
+          policies/TESTMSI_52c87e98-a67f-4d48-adae-4f66c5652ac7/**
+          policies/moanjum_tag_test_true_831d471c-0a56-448e-9c27-9a879c9ea3ba/**
+          policies/PolicyAsCodeTest_8c3cea42-bc7a-4627-9721-219730045b1f/**
+          policies/TEST_Duplicate1_9bbddb6e-eb92-4490-a003-5a7bd19f2402/**

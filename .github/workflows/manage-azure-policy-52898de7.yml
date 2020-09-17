@@ -1,0 +1,27 @@
+name: manage-azure-policy-52898de7
+on:
+  push:
+    paths:
+      - 'policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**'
+      - 'policies/Cognitive_Services_accounts_should_restrict_network_access_037eea7a-bd0a-46c5-9a66-03aea78705d3/**'
+      - 'policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**'
+      - 'policies/Configure_backup_on_VMs_of_a_location_to_an_existing_central_Vault_in_the_same_location_09ce66bc-1220-4153-8104-e3f51c936913/**'
+      - .github/workflows/manage-azure-policy-52898de7.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_52898de7}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**
+          policies/Cognitive_Services_accounts_should_restrict_network_access_037eea7a-bd0a-46c5-9a66-03aea78705d3/**
+          policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**
+          policies/Configure_backup_on_VMs_of_a_location_to_an_existing_central_Vault_in_the_same_location_09ce66bc-1220-4153-8104-e3f51c936913/**

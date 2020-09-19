@@ -1,0 +1,23 @@
+name: manage-azure-policy-64d40986
+on:
+  push:
+    paths:
+      - 'policies/_Preview_:_Network_traffic_data_collection_agent_should_be_installed_on_Linux_virtual_machines_04c4380f-3fae-46e8-96c9-30193528f602/**'
+      - 'policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**'
+      - .github/workflows/manage-azure-policy-64d40986.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_64d40986}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/_Preview_:_Network_traffic_data_collection_agent_should_be_installed_on_Linux_virtual_machines_04c4380f-3fae-46e8-96c9-30193528f602/**
+          policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**
